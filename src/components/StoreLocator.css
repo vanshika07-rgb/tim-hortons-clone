@@ -1,0 +1,361 @@
+.store-locator {
+  margin: 80px 7% 100px;
+  padding: 80px 8%;
+
+  min-height: 520px;
+
+  background: #f3e4d8;
+
+  border-radius: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  overflow: hidden;
+}
+
+/* LEFT SIDE */
+
+.store-content {
+  max-width: 570px;
+}
+
+.store-label {
+  color: #d7193f;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 18px;
+}
+
+.store-content h2 {
+  color: #351515;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(42px, 5vw, 65px);
+
+  line-height: 1;
+
+  margin: 0 0 25px;
+}
+
+.store-description {
+  color: #665b57;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  max-width: 480px;
+
+  margin-bottom: 30px;
+}
+
+/* SEARCH */
+
+.store-search {
+  display: flex;
+
+  max-width: 550px;
+
+  background: white;
+
+  border-radius: 35px;
+
+  padding: 6px;
+
+  box-shadow: 0 8px 25px rgba(53, 21, 21, 0.08);
+}
+
+.store-search input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  padding: 14px 20px;
+
+  background: transparent;
+
+  color: #351515;
+
+  font-size: 14px;
+}
+
+.store-search input::placeholder {
+  color: #999;
+}
+
+.store-search button {
+  border: none;
+
+  background: #d7193f;
+
+  color: white;
+
+  border-radius: 30px;
+
+  padding: 14px 24px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.store-search button:hover {
+  background: #b91335;
+
+  transform: translateY(-2px);
+}
+
+/* RIGHT SIDE */
+
+.store-visual {
+  width: 40%;
+
+  min-height: 380px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* MAP */
+
+.map-circle {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #fff7f0 0%,
+      #e5c1a8 65%,
+      #c99777 100%
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow:
+    0 25px 50px rgba(53, 21, 21, 0.15);
+
+  animation: mapFloat 4s ease-in-out infinite;
+}
+
+.map-pin {
+  font-size: 95px;
+
+  filter: drop-shadow(
+    0 10px 8px rgba(53, 21, 21, 0.2)
+  );
+}
+
+/* STORE CARD */
+
+.store-card {
+  position: absolute;
+
+  right: 0;
+
+  bottom: 20px;
+
+  width: 270px;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  box-shadow:
+    0 15px 35px rgba(53, 21, 21, 0.15);
+
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+.store-card > span {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #f3d3bf;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+.store-card strong {
+  color: #351515;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+}
+
+.store-card p {
+  color: #888;
+
+  font-size: 12px;
+
+  margin: 5px 0 0;
+}
+
+/* ANIMATIONS */
+
+@keyframes mapFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .store-locator {
+    padding: 65px 6%;
+  }
+
+  .store-visual {
+    width: 42%;
+  }
+
+  .map-circle {
+    width: 240px;
+    height: 240px;
+  }
+
+  .map-pin {
+    font-size: 75px;
+  }
+
+  .store-card {
+    width: 230px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+  .store-locator {
+    margin: 50px 20px 70px;
+
+    padding: 60px 30px;
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .store-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .store-search {
+    flex-direction: column;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    gap: 10px;
+  }
+
+  .store-search input {
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 16px 20px;
+  }
+
+  .store-search button {
+    padding: 16px;
+  }
+
+  .store-visual {
+    width: 100%;
+
+    margin-top: 50px;
+
+    min-height: 330px;
+  }
+
+  .map-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  .map-pin {
+    font-size: 70px;
+  }
+
+  .store-card {
+    right: 50%;
+
+    transform: translateX(50%);
+
+    bottom: 0;
+
+    width: 260px;
+  }
+
+}

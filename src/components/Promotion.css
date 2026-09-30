@@ -1,0 +1,199 @@
+.promotion {
+  min-height: 500px;
+  margin: 40px 7% 100px;
+  border-radius: 28px;
+  background: #351515;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 70px 8%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* LEFT CONTENT */
+
+.promotion-content {
+  max-width: 550px;
+  color: white;
+}
+
+.promotion-label {
+  color: #f3b6a5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.promotion h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.promotion-content > p:not(.promotion-label) {
+  color: #eadbd6;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 440px;
+}
+
+/* BUTTON */
+
+.promotion button {
+  background: white;
+  color: #351515;
+
+  border: none;
+  border-radius: 28px;
+
+  padding: 15px 30px;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.promotion button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* VISUAL */
+
+.promotion-visual {
+  width: 42%;
+  height: 350px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DONUT */
+
+.promo-donut {
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+  background: #d99165;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 130px;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+
+  transform: rotate(-10deg);
+
+  animation: donutFloat 4s ease-in-out infinite;
+}
+
+/* COFFEE */
+
+.promo-coffee {
+  position: absolute;
+
+  right: 10%;
+  bottom: 10%;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  background: #f3dfd2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 65px;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
+  animation: coffeeFloat 3s ease-in-out infinite;
+}
+
+/* DONUT ANIMATION */
+
+@keyframes donutFloat {
+  0% {
+    transform: rotate(-10deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-5deg) translateY(-12px);
+  }
+
+  100% {
+    transform: rotate(-10deg) translateY(0);
+  }
+}
+
+/* COFFEE ANIMATION */
+
+@keyframes coffeeFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .promotion {
+    margin: 20px;
+    padding: 55px 30px;
+
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promotion-content {
+    max-width: 600px;
+  }
+
+  .promotion-content > p:not(.promotion-label) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promotion-visual {
+    width: 100%;
+    margin-top: 45px;
+    height: 280px;
+  }
+
+  .promo-donut {
+    width: 190px;
+    height: 190px;
+    font-size: 100px;
+  }
+
+  .promo-coffee {
+    width: 95px;
+    height: 95px;
+    font-size: 50px;
+  }
+}

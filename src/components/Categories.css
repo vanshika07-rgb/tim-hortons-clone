@@ -1,0 +1,188 @@
+.categories {
+  padding: 100px 7%;
+  background: #fffaf7;
+}
+
+/* HEADING */
+
+.categories-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.categories-heading > p {
+  color: #d7193f;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.categories-heading h2 {
+  font-family: Georgia, serif;
+  color: #351515;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1;
+  margin: 0 0 25px;
+}
+
+.categories-heading span {
+  display: block;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 550px;
+  margin: auto;
+}
+
+/* GRID */
+
+.category-grid {
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+
+.category-card {
+  min-height: 300px;
+
+  background: #ffffff;
+
+  border: 1px solid #eadfd9;
+  border-radius: 22px;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #d7193f;
+
+  box-shadow: 0 20px 45px rgba(53, 21, 21, 0.12);
+}
+
+/* ICON */
+
+.category-icon {
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background: #f0d2bb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 65px;
+
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+/* INFORMATION */
+
+.category-info {
+  margin-top: 30px;
+}
+
+.category-info h3 {
+  color: #351515;
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+
+  margin: 0 0 8px;
+}
+
+.category-info p {
+  color: #777;
+
+  font-size: 14px;
+
+  margin: 0 0 18px;
+}
+
+/* BUTTON */
+
+.category-info button {
+  background: transparent;
+
+  border: none;
+
+  padding: 0;
+
+  color: #d7193f;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.category-info button:hover {
+  letter-spacing: 2px;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .categories {
+    padding: 70px 20px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    min-height: 280px;
+  }
+
+  .category-icon {
+    width: 110px;
+    height: 110px;
+    font-size: 55px;
+  }
+
+}

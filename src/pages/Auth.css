@@ -1,0 +1,288 @@
+/* =========================================
+   AUTH PAGE
+========================================= */
+
+.auth-page {
+  min-height: 75vh;
+  padding: 80px 20px;
+  background: #f8f1e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================
+   AUTH CARD
+========================================= */
+
+.auth-card {
+  width: min(480px, 92%);
+  padding: 45px;
+  background: #fffaf5;
+  border: 1px solid #eaded3;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 20px 55px rgba(70, 35, 25, 0.12);
+  position: relative;
+  z-index: 2;
+}
+
+.auth-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1ddd0;
+  border-radius: 50%;
+
+  font-size: 32px;
+}
+
+.auth-label {
+  margin: 0 0 10px;
+
+  color: #d7193f;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.auth-card h1 {
+  margin: 0;
+
+  color: #321414;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.auth-subtitle {
+  margin: 15px 0 30px;
+
+  color: #765f5f;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.auth-field {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.auth-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #321414;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.auth-field input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  border: 1px solid #ddcec3;
+  border-radius: 12px;
+
+  background: white;
+
+  color: #321414;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.auth-field input:focus {
+  border-color: #d7193f;
+
+  box-shadow:
+    0 0 0 3px rgba(215, 25, 63, 0.08);
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.auth-submit {
+  width: 100%;
+
+  margin-top: 8px;
+
+  padding: 17px 25px;
+
+  border: none;
+  border-radius: 35px;
+
+  background: #d7193f;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.auth-submit:hover {
+  transform: translateY(-3px);
+
+  background: #ef3157;
+
+  box-shadow:
+    0 12px 28px rgba(215, 25, 63, 0.25);
+}
+
+/* =========================================
+   SWITCH SIGN IN / SIGN UP
+========================================= */
+
+.auth-switch {
+  margin-top: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
+  color: #765f5f;
+
+  font-size: 13px;
+}
+
+.auth-switch button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #d7193f;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.auth-switch button:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   BACK HOME
+========================================= */
+
+.auth-back {
+  display: inline-block;
+
+  margin-top: 25px;
+
+  color: #765f5f;
+
+  text-decoration: none;
+
+  font-size: 13px;
+}
+
+.auth-back:hover {
+  color: #d7193f;
+}
+
+/* =========================================
+   DECORATIONS
+========================================= */
+
+.auth-decoration {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1ddd0;
+
+  border-radius: 50%;
+
+  font-size: 38px;
+
+  opacity: 0.7;
+
+  animation: authFloat 4s ease-in-out infinite;
+}
+
+.auth-decoration-one {
+  top: 12%;
+  left: 12%;
+}
+
+.auth-decoration-two {
+  right: 12%;
+  bottom: 12%;
+
+  animation-delay: 1.5s;
+}
+
+@keyframes authFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .auth-page {
+    padding: 55px 15px;
+  }
+
+  .auth-card {
+    padding: 35px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 34px;
+  }
+
+  .auth-decoration {
+    display: none;
+  }
+
+  .auth-switch {
+    flex-direction: column;
+  }
+}
