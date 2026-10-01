@@ -24,5 +24,18 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Build Docker image
-        run: docker build -t timhortons-frontend .
+      # - name: Build Docker image
+      #   run: docker build -t timhortons-frontend .
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: vanshika07rgb/timhortons-frontend:latest
