@@ -1,0 +1,33 @@
+services:
+  mongodb:
+    image: mongo:8
+    container_name: timhortons-mongo-compose
+    ports:
+      - "27017:27017"
+    volumes:
+    - mongo-data:/data/db
+    
+
+  backend:
+    build:
+      context: ./backend
+    container_name: timhortons-backend-compose
+    ports:
+      - "5000:5000"
+    env_file:
+    - ./backend/.env
+    depends_on:
+      - mongodb     
+
+
+  frontend:
+    build:
+      context: .
+    container_name: timhortons-frontend-compose
+    ports:
+      - "5174:5173"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
